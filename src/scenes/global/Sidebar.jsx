@@ -29,7 +29,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
       onClick={() => setSelected(title)}
       icon={icon}
     >
-      <Typography>{title}</Typography>
+      <Typography sx={{fontSize: "16px"}}>{title}</Typography>
       <Link to={to} />
     </MenuItem>
   );
@@ -79,9 +79,6 @@ const Sidebar = () => {
                 alignItems="center"
                 ml="15px"
               >
-                <Typography variant="h3" color={colors.grey[100]}>
-                  ADMINIS
-                </Typography>
                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                   <MenuOutlinedIcon />
                 </IconButton>
@@ -101,16 +98,16 @@ const Sidebar = () => {
                 />
               </Box>
               <Box textAlign="center">
+                <Typography sx={{mt: 3}} variant="h5" color={colors.greenAccent[500]}>
+                  Welcome to 
+                </Typography>
                 <Typography
                   variant="h2"
                   color={colors.grey[100]}
                   fontWeight="bold"
-                  sx={{ m: "10px 0 0 0" }}
+                  sx={{ m: "5px 0 0 0" }}
                 >
-                  Ed Roh
-                </Typography>
-                <Typography variant="h5" color={colors.greenAccent[500]}>
-                  VP Fancy Admin
+                  DevProductiv
                 </Typography>
               </Box>
             </Box>
